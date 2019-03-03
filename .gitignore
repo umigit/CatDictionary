@@ -100,5 +100,10 @@ venv.bak/
 # mkdocs documentation
 /site
 
+*node_modules/
 # mypy
 .mypy_cache/
+gibo 2.1.2 by Simon Whitaker <sw@netcetera.org>
+https://github.com/simonwhitaker/gibo
+gibo 2.1.2 by Simon Whitaker <sw@netcetera.org>
+https://github.com/simonwhitaker/gibo
