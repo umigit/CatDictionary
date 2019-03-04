@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from center.views import CenterListView
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', CenterListView.as_view(), name="index"),
 ]

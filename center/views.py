@@ -1,3 +1,6 @@
 from django.shortcuts import render
+from .models import CatData
+from django.views.generic import ListView
 
-# Create your views here.
+class CenterListView(ListView):
+    model = CatData
