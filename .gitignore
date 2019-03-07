@@ -101,20 +101,9 @@ venv.bak/
 /site
 
 *node_modules/
-*media/
 # mypy
 .mypy_cache/
 gibo 2.1.2 by Simon Whitaker <sw@netcetera.org>
 https://github.com/simonwhitaker/gibo
 gibo 2.1.2 by Simon Whitaker <sw@netcetera.org>
 https://github.com/simonwhitaker/gibo
-
-*.pyc
-
-*.pyc
-
-.vscode/settings.json
-
-CatDictionary/__pycache__/settings.cpython-37.pyc
-
-CatDictionary/__pycache__/urls.cpython-37.pyc

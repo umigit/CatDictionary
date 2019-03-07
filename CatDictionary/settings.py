@@ -40,9 +40,6 @@ INSTALLED_APPS = [
 
     'center',
     'webpack_loader',
-    'extra_views',
-    'imagekit',
-    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -128,9 +125,6 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'assets'),
 )
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-MEDIA_URL = '/media/'
 
 WEBPACK_LOADER = {
     'DEFAULT': {

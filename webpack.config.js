@@ -7,7 +7,6 @@ module.exports = {
 
   entry: './assets/js/main.js', // これがエントリーポイント
   mode: 'development',
-  watch: true,
   output: { // コンパイルされたファイルの設定
       path: path.resolve('./assets/bundles/'),
       filename: "[name]-[hash].js",
@@ -26,13 +25,8 @@ module.exports = {
   module: {
     rules:[
       {
-        test: /\.css$/,
-        use: [ 'style-loader', 'css-loader' ]
-      },
-
-      {
-        test: /\.scss/,
-        use: [ 'style-loader', 'css-loader', 'sass-loader']
+      test: /\.css$/,
+      use: [ 'style-loader', 'css-loader' ]
       },
     ],
   },
