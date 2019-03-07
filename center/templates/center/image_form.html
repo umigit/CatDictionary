@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load widget_tweaks %}
+
+{% block body %}
+<div class="col-lg-8 mx-auto"><div class="card"><div class="card-body">
+<form method="POST", enctype="multipart/form-data", class="form">
+    {% csrf_token %}
+    <img src="{% static 'images/cat_default.png' %}" alt="" class="img-thumb-box">
+    <div class="form-group">
+        {{ form.image_original }}
+    </div>
+    <div class="form-group">
+        {{ form.latitude|add_class:"form-control" }}
+    </div>
+    <div class="form-group">
+        {{ form.longitude|add_class:"form-control" }}
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">送信</button>
+</form>
+</div></div></div>
+{% endblock %}

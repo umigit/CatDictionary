@@ -15,10 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from . import settings
+from django.contrib.staticfiles.urls import static
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from center.views import CatListView, ImageListView, CatCreateView, ImageCreateView, CatImageCreateFormSetView
 
-from center.views import CenterListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', CenterListView.as_view(), name="index"),
+    path('', ImageListView.as_view(), name = "index"),
+    path('create', CatCreateView.as_view(), name = "create"),
+    path('images/upload', ImageCreateView.as_view(), name = "upload"),
+    path('cats', CatListView.as_view(), name="cats"),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

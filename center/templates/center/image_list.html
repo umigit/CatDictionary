@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block body %}
+{% for image in object_list %}
+
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        <a href="#"><img class="card-img-top" src="{{image.image_middle.url}}" alt=""></a>
+        <div class="card-body">
+            <h2>{{image.cat.name}}</h2>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
