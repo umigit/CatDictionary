@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% load staticfiles %} 
+
+{% block body %}
+{% for data in object_list %}
+<div class="col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        
+        {% if data.images.first is None %}
+        <a href="#"><img class="card-img-top" src="{% static 'images/cat_default.png' %}" alt=""></a>
+        {% else %}
+        <a href="#"><img class="card-img-top" src="{{data.images.first.image_middle.url}}" alt=""></a>
+        {% endif %}
+        
+        
+        
+        <div class="card-body">
+        <h4 class="card-title">
+            <a href="#">{{data.name}}</a>
+        </h4>
+        <h5></h5>
+        <p class="card-text">nyarn!</p>
+        </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
